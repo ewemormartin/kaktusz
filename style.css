@@ -1,0 +1,103 @@
+main {
+    margin: auto;
+    width: 80%;
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+        "h h "
+        "n n"
+        "as a"
+        "f f";
+}
+    
+aside img {
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px blue solid;
+}
+               
+aside {
+   grid-area: as;
+}
+
+  header {
+    background-color: aqua;
+    border: 2px lightblue;
+    grid-area: h;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+    width: auto;
+  }
+  
+  header h1 {
+    text-transform: uppercase;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline-block;
+    background-color: transparent;
+    
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  nav li:hover {
+    background-color: orange;
+  }
+  
+
+  article {
+    background-color:aqua;
+    grid-area: a;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: justify;
+    max-width: fit-content;
+}
+    
+  
+  .menu {
+    display:grid ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-area: n;
+    height: 50px;
+    background-color: rgb(9, 106, 218);
+    padding: 0 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    
+  }
+
+  footer{
+    grid-area: f;
+    text-align: center;
+    background-color: aqua;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+  }
+  
+  @media (max-width: 700px) {
+    main > * {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  
+    nav li {
+      display: block;
+    }
+  }
